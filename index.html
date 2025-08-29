@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Chhara Radio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script>
+    window.alert("Welcome!");
+  </script>
+  <style>
+    .navbar-nav {
+      color: black;
+      padding: 10px;
+    }
+    .navbar-nav a {
+      font-size: larger;
+      text-align: center;
+    }
+
+    .navbar-default {
+      background-color: #fff;
+      border-color: #fff;
+    }
+
+    img.logo {
+      float: left;
+      height: 80px;
+      padding: 0px 0 10px 0;
+    }
+
+    h1 {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      text-align: center;
+    }
+
+    .img-rounded {
+      border-radius: 10px;
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .release-item h3 {
+      color: darkgoldenrod;
+      margin-top: 15px;
+    }
+
+    .release-item p {
+      color: white;
+    }
+
+    .release-section {
+      background-color: black;
+      padding: 50px 0;
+    }
+
+    .download {
+      background-color: rgb(159, 43, 82);
+      color: white;
+    }
+
+    .download1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .app-logo {
+      padding: 20px;
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      display: flex;
+    }
+
+    .row {
+      margin-right: 0%;
+      margin-left: 0%;
+    }
+
+    p {
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      font-family: Georgia, serif;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .page2 .category {
+      max-width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 10px;
+    }
+
+    .page2 .label {
+      font-size: 10px;
+      color: white;
+      font-family: 'Rock Salt';
+      text-align: center;
+    }
+
+    .page2 .label span:first-child {
+      color: #E94E1B;
+    }
+
+    .col-lg-6 {
+      position: relative;
+      min-height: 1px;
+      padding: 0px;
+
+    }
+
+    .col-sm-3 {
+      margin-top: 150px;
+      margin-left: 15px;
+    }
+
+    b {
+      font-weight: 500;
+      display: block;
+      padding: 0px 0px 0px 0px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .heading {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: rgb(32, 31, 31);
+      padding: 15px;
+    }
+
+    .footer-container {
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    .footer-menu {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-menu li {
+      margin: 0 15px;
+      font-size: 18px;
+    }
+
+    .copyright {
+      margin: 30px 0;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .social-heading {
+      display: block;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: #333;
+      font-size: 24px;
+    }
+
+    .checkbox,
+    .radio {
+      position: relative;
+      display: block;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    @media (max-width: 400px) {
+
+      .download1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      img.logo {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 5px;
+        padding: 0px;
+      }
+
+      .navbar-brand {
+        padding: 5px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      .app-logo {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .footer-menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin-left: 0;
+      }
+
+      .footer-menu li {
+        margin: 0 5px 0 0;
+        font-size: 10px;
+        text-align: center;
+      }
+
+      ul {
+        padding-inline-start: 0px
+      }
+
+      .p {
+        font-size: 15px;
+        text-align: center;
+        padding: 5px;
+      }
+
+      .b {
+        font-size: 15px;
+        text-align: center;
+        padding: 5px;
+      }
+
+      .text-center1 {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <div class="container">
+      <!-- <nav class="navbar navbar-expand-lg navbar-default">
+        <img src="images/logo.png" alt="Chhara Radio" class="logo">
+        <button class="navbar-toggler" style="float: right;" ; type="button" data-toggle="collapse"
+          data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Hope</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Hungama</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Artist</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Radio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">All India</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav> -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarNav">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="images/logo.png" class="logo" alt="Chhara Radio"></a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Community</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Hope</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Hungama</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Artist</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Radio</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">All India</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Careers</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+  </section>
+  <img src="images/banner.jpg" alt="banner" style="width: 100%; height: auto;">
+
+  <section class="release-section">
+    <div class="container text-center">
+      <h1 style="color: darkgoldenrod; text-align: left;">New Releases</h1>
+      <div class="row" style="margin-top: 30px;">
+        <div class="col-sm-4 release-item">
+          <img src="images/jingle.jpg" alt="Jingle" class="img-rounded">
+          <h3>Chhara radio mhara radio jingle</h3>
+          <p>Mohit batunge, Shaan batunge, Tarun gagdekar</p>
+        </div>
+        <div class="col-sm-4 release-item">
+          <img src="images/aanigkam.jpg" alt="Aangikam" class="img-rounded">
+          <h3>Aangikam. Krishna ki chetavani</h3>
+          <p>Alok gagdeka</p>
+        </div>
+        <div class="col-sm-4 release-item">
+          <img src="images/ramdhari.jpg" alt="Ramdhari" class="img-rounded">
+          <h3>Ramdhari...</h3>
+          <p>Mahesh tamchekar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="download">
+    <div class="download1">
+      <img src="images/app-logo.png" alt="logo" class="app-logo"
+        style="width: 120px; height: 120px; margin-right: 20px;">
+      <h1>Download the Chhara Radio now!</h1>
+    </div>
+  </section>
+  <section class="page1">
+    <div style="background-color: #FFB800;">
+      <div class="container">
+        <h4>
+          <p style="color: black;">
+            Chhara Radio, a groundbreaking initiative, is dedicated to the preservation of our endangered Bhantu Boli.
+            This cultural platform, manifested in the form of an app, strives to be a beacon for the richness of our
+            heritage.
+          </p>
+          <p style="color: black;">
+            At the heart of Chhara Radio is the commitment to provide a multifaceted experience.
+            Through literature translations, historical insights, and engaging entertainment in our dialect,
+            the app unfolds as a dynamic repository of Bhantu Boli culture.
+          </p>
+          <p style="color: black;">
+            Immerse yourself in the captivating world of radio plays, featuring the works of profound writers and
+            renowned pieces.
+            This not only cultivates cultural pride but also introduces the depth and beauty of Bhantu Boli literature
+            to a wider audience.
+          </p>
+          <p style="color: black;">
+            Chhara Radio goes beyond entertainment; it aspires to be a holistic resource for all.
+            Offering moral stories, educational content, and career guidance, the app caters to every age group in our
+            community.
+          </p>
+          <p style="color: black;">
+            By embracing technology, Chhara Radio becomes more than a cultural preserver;
+            it transforms into a medium for reconnecting generations.
+            Through this app, we ensure the seamless transmission of our culture and language, lighting the way for a
+            brighter future.
+          </p>
+          <p style="color: black;"><b> Chhara Radio: where tradition meets technology, and the spirit of Bhantu Boli
+              lives on.</b>
+          </p>
+        </h4>
+      </div>
+    </div>
+  </section>
+  <section class="page2">
+    <div style="background-color: black; padding: 30px 0;">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-xs-6 col-sm-2 category">
+            <img src="images/cat1.png" alt="Community">
+            <div class="label"><span>C</span>OMMUNITY</div>
+          </div>
+          <div class="col-xs-6 col-sm-2 category">
+            <img src="images/cat2.png" alt="Hope">
+            <div class="label"><span>H</span>OPE</div>
+          </div>
+          <div class="col-xs-6 col-sm-2 category">
+            <img src="images/cat3.png" alt="Hungama">
+            <div class="label"><span>H</span>UNGAMA</div>
+          </div>
+          <div class="col-xs-6 col-sm-2 category">
+            <img src="images/cat4.png" alt="Artist">
+            <div class="label"><span>A</span>RTIST</div>
+          </div>
+          <div class="col-xs-6 col-sm-2 category">
+            <img src="images/cat5.png" alt="Radio">
+            <div class="label"><span>R</span>ADIO</div>
+          </div>
+          <div class="col-xs-6 col-sm-2 category">
+            <img src="images/cat6.png" alt="All India">
+            <div class="label"><span>A</span>LL INDIA</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="page3">
+    <div style="background-color: #224642;">
+      <div class="row text-center">
+        <div class="col-lg-6 community">
+          <img src="images/community.jpg" alt="community" style="width: 100%; height: auto; padding: 0%;  ">
+        </div>
+        <div class="col-lg-6 community " style="padding: 100px 10px 0 0; text-align: left;">
+          <p>
+
+            Community: Chhara Radio is your digital hub, where shared stories and voices converge. It's more than an
+            app; it's a dynamic space where our community comes alive through vibrant narratives and diverse voices.
+            From nostalgic radio plays to contemporary conversations, we're here to unite, entertain, and celebrate our
+            shared identity.
+            <b>
+              Chhara Radio: Connecting hearts through the power of stories and voices.</b>
+          </p>
+          <div class="row"
+            style="display: flex; justify-content: space-around;  padding: 90px 0px 0px 0px; text-align: center;">
+            <div class="col-sm-4">
+              <img src="images/comm_1.png" alt="com" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class="heading">DHARMA</div>
+            </div>
+            <div class="col-sm-4">
+              <img src="images/comm_2.png" alt="com" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class="heading">HISTORY</div>
+            </div>
+            <div class="col-sm-4">
+              <img src="images/comm_3.png" alt="com" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class="heading">CULTURE</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="page4">
+    <div style="background-color: #da6e1c;">
+      <div class="row text-center1">
+
+        <div class="col-lg-6 hope" style="padding: 100px 10px 0 0; text-align: left; color: white;">
+          <p>
+            Hope: Chhara Radio, more than an app, is your digital haven where stories of hope unfold, connecting hearts
+            and fostering resilience. In every play, insight, and shared experience, we contribute to a collective
+            vision of a brighter, more inclusive future. Join us on this journey, where each moment spent listening
+            becomes a step toward a world filled with hope and understanding.
+            <b>
+              Chhara Radio: Lightings the path to a future of positivity and inclusivity.</b>
+          </p>
+          <div class="row"
+            style="display: flex; justify-content: space-around;  padding: 90px 0px 0px 0px; text-align: center;">
+            <div class="col-sm-4">
+              <img src="images/hope_1.png" alt="hope" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class="heading">Saraswati putra</div>
+            </div>
+            <div class="col-sm-4">
+              <img src="images/hope_2.png" alt="hope" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class="heading">newbegin</div>
+            </div>
+            <div class="col-sm-4">
+              <img src="images/hope_3.png" alt="hope" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class="heading">cartoon</div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-6 hope">
+          <img src="images/hope.jpg" alt="hope" style="width: 100%; height: auto; padding: 0%;">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="page5">
+    <div style="background-color: rgb(183, 55, 100);">
+      <div class="row text-center">
+        <div class="col-lg-6 hungama">
+          <img src="images/hungama.jpg" alt="hungama" style="width: 100%; height: auto; padding: 0%; ">
+        </div>
+        <div class="col-lg-6 hungama " style="padding: 100px 10px 0 0; color: white;">
+          <p>
+            Hungama(Celebration): Chhara Radio turns airwaves into a lively celebration. From spirited tunes to festive
+            plays, immerse in joy. More than an app, it's perpetual fiesta where our community pulses with excitement.
+            Join Chhara Radio, where every beat is a toast to vibrant celebrations! Light the path to a future of
+            positivity and inclusivity.
+            <b>
+              Chhara Radio:Lighting the path to a future where celebration becomes the catalyst for positivity and
+              inclusivity.</b>
+          </p>
+          <div class="row" style="display: flex; justify-content: space-around; padding: 90px 0px 0px 0px; ">
+            <div class="col-sm-6 hungama">
+              <img src="images/hungama_1.png" alt="com" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class="heading">bhattiyan ke ganna</div>
+            </div>
+            <div class="col-sm-6 hungama">
+              <img src="images/hungama_2.png" alt="com" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class="heading">maya talkies</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="page6">
+    <div style="background-color: #6A2C28;">
+      <div class="row text-center1">
+
+        <div class="col-lg-6 Artist " style="padding: 100px 10px 0 0; text-align: left;  color: white;">
+          <p>Artists: Chhara Radio
+            is more than an app; it's a stage that amplifies the voices of artists, celebrating
+            their talents across diverse genres.
+            Join us in spotlighting the richness of our community's creativity, where every note, every word, becomes a
+            canvas for artistic expres-sion. Whether it's the soulful tunes, captivating poetry, or mesmeri-zing
+            performances, Chhara Radio is a dynamic showcase of talent. Tune in and be part of our artistic journey,
+            where creativity knows no bounds.
+
+            <b>Chhara Radio: Fostering a community
+              where every artists hines.</b>
+          </p>
+          <div class="row"
+            style="display: flex; justify-content: space-around; padding: 90px 10px 10px 10px; text-align: center ">
+            <div class="col-sm-4">
+              <img src="images/artist_1.png" alt="Artist" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class="heading">band</div>
+            </div>
+            <div class="col-sm-4">
+              <img src="images/artist_2.png" alt="Artist" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class="heading">mhare gaayak</div>
+            </div>
+            <div class="col-sm-4">
+              <img src="images/artist_3.png" alt="Artist" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class="heading">mhare ganne</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 artist">
+          <img src="images/artist.jpg" alt="Artist" style="width: 100%; height: auto; padding: 0%;">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="page7">
+    <div style="background-color: #8DB6B5;">
+      <div class="row text-center">
+        <div class="col-lg-6 radio">
+          <img src="images/radio.jpg" alt="radio" style="width: 100%; height: auto; padding: 0;">
+        </div>
+        <div class="col-lg-6 radio " style="padding: 100px 10px 0 0; text-align: left; color: white;">
+          <p>
+            Radio: Chhara Radio, a dynamic hub where music, stories, and conversations seamlessly blend to offer both
+            entertainment and in-formation. Immerse yourself in a world where every tune, every na-rrative, and every
+            discussion becomes a journey of discovery. Chhara Radio is not just an app; it's your gateway to a vibrant
+            audio experience, where entertainment meets knowledge. Join us on the airwaves, where every moment is an
+            opportunity to be entertained, enlightened, and connected.
+            <b> Chhara Radio: Guiding to a future
+              where positivity, inclusivity, and dynamic audio harmonize.</b>
+          </p>
+          <div class="row"
+            style="display: flex; justify-content: space-around; padding: 50px 10px 10px 10px; text-align: center">
+            <div class="col-sm-4">
+              <img src="images/radio_1.png" alt="radio" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class="heading">mhari baat</div>
+            </div>
+            <div class="col-sm-4">
+              <img src="images/radio_2.png" alt="radio" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class="heading">my voice</div>
+            </div>
+            <div class="col-sm-4">
+              <img src="images/radio_3.png" alt="radio" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class="heading">sports</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="page8" style="background-color: #A96E54;">
+    <div style="background-color: #A96E54;">
+      <div class="row text-center1">
+
+        <div class="col-lg-6 All India " style="padding: 100px 10px 0 0; text-align: left;  color: white;">
+          <p>All India: Chhara
+            Radio, the heartbeat of a unified nation, bridges diverse cultures and echoes the
+            richness of India's heritage. Join us in this journey, where every note and every story resonates with the
+            spirit of unity, connecting listeners across the expanse of our incre-dible land.
+            <b> Chhara Radio: Beyond the digital
+              realm, a cultural embrace that binds us, celebrating the kaleidoscope
+              of diversity in All India</b>
+          </p>
+          <div class="row"
+            style="display: flex; justify-content: space-around; padding: 150px 10px 10px 10px; text-align: center;">
+            <div class="col-sm-4">
+             <img src="images/all-india_1.png" alt="All India" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class= "heading">suno bhantu</div>
+            </div>
+            <div class="col-sm-4">
+              <img src="images/all-india_2.png" alt="All India" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class="heading">mhara samaj</div>
+            </div>
+            <div class="col-sm-4">
+              <img src="images/all-india_3.png" alt="All India" style="width: 80px; height: auto; padding-top: 10px;">
+              <div class="heading">career</div>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-lg-6 hope">
+          <img src="images/all-india.jpg" alt="All India" style="width: 100%; height: auto; padding: 0%;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page9">
+    <div class="container footer-container">
+      <ul class="footer-menu">
+        <li>Sign Up</li>
+        <li>ChharaRadio For IOS</li>
+        <li>ChharaRadio For Android</li>
+        <li>New Releases</li>
+      </ul>
+      <div class="copyright">
+        © 2024 ChhanRadio All rights reserved.
+      </div>
+      <div class="social-icons">
+        <span class="social-heading">FOLLOW US</span>
+        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+</body> 
+</html>
