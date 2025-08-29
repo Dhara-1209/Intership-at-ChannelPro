@@ -7,7 +7,7 @@ It includes a homepage design for **Chhah Radio**, three JavaScript mini-project
 
 ## 📑 Projects
 
-### 1. Chhah Radio Homepage
+### 1. Chhah Radio Homepage(Index1.html)
 
 A responsive homepage design for **Chhah Radio**, built with HTML, CSS, and Bootstrap.
 
