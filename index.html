@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    :root {
+      --bg-light: linear-gradient(135deg, #e0f2ff 0%, #f7fbff 100%);
+      --bg-dark: linear-gradient(135deg, #0d0f14 0%, #111318 100%);
+      --text-light: #0b1220;
+      --text-dark: #f4f6f8;
+      --card-bg-light: #ffffff;
+      --card-bg-dark: #1b1f2a;
+      --muted: #6b7280;
+      --primary: #3b82f6;
+      --primary-hover: #2563eb;
+      --border-light: rgba(15, 23, 42, 0.08);
+      --border-dark: rgba(255, 255, 255, 0.08);
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: var(--bg-light);
+      color: var(--text-light);
+      transition: background 0.3s ease, color 0.3s ease;
+      padding: 24px;
+    }
+
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .weather-app {
+      width: 100%;
+      max-width: 560px;
+      background: var(--card-bg-light);
+      border: 1px solid var(--border-light);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(2, 12, 27, 0.06);
+      padding: 24px;
+      transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    body.dark .weather-app {
+      background: var(--card-bg-dark);
+      border-color: var(--border-dark);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin: 0;
+      letter-spacing: 0.3px;
+    }
+
+    .toggle-btn {
+      background: transparent;
+      color: inherit;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 12px;
+      cursor: pointer;
+      opacity: 0.9;
+    }
+
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 8px;
+      margin: 12px 0 8px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid var(--border-light);
+      background: transparent;
+      color: inherit;
+      outline: none;
+    }
+
+    body.dark input[type="text"] {
+      border-color: var(--border-dark);
+    }
+
+    button.primary {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 12px 14px;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    button.primary:hover {
+      background: var(--primary-hover);
+    }
+
+    button.ghost {
+      background: transparent;
+      color: inherit;
+      border: 1px solid var(--border-light);
+      border-radius: 10px;
+      padding: 12px 14px;
+      cursor: pointer;
+    }
+
+    body.dark button.ghost {
+      border-color: var(--border-dark);
+    }
+
+    #error-message {
+      color: #ef4444;
+      margin-top: 4px;
+      min-height: 20px;
+      font-size: 13px;
+    }
+
+    #weather-info {
+      margin-top: 10px;
+    }
+
+    #weather-info img {
+      display: block;
+      margin: 8px auto;
+    }
+
+    #forecast-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .forecast-card {
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      padding: 10px;
+      background: transparent;
+      text-align: center;
+    }
+
+    body.dark .forecast-card {
+      border-color: var(--border-dark);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="weather-app">
+    <div class="header">
+      <h1>Weather</h1>
+      <button id="theme-toggle-btn" class="toggle-btn">Switch to Dark Mode</button>
+    </div>
+    <div class="controls">
+      <input type="text" id="city-input" placeholder="Search city...">
+      <button id="search-btn" class="primary">Search</button>
+
+    </div>
+    <button id="unit-toggle-btn" class="ghost" style="width:100%; margin-top: 6px;">Switch to °F</button>
+    <div id="error-message" aria-live="assertive"></div>
+    <div id="weather-info" role="status" aria-live="polite"></div>
+    <div id="forecast-info" role="status" aria-live="polite"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
