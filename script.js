@@ -1,4 +1,4 @@
-const API_KEY = "5f00bf4b69509270def8cff8bf02de58";
+const API_KEY = "api";
 let currentUnit = "metric"; // 'metric' for °C, 'imperial' for °F
 let isCelsius = true;
 let lastQuery = null;
@@ -206,3 +206,4 @@ document.getElementById("city-input").addEventListener("keydown", (event) => {
     document.getElementById("search-btn").click();
   }
 });
+
